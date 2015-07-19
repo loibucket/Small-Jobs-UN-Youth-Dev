@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="smalljobs.css">
+		<title>Small Jobs</title>
+	</head>
+
+	<body onload = "getLocation();">
+		<h1 id = "title">Small Jobs</h1>
+		<div class="centerBox">
+			<p id="location"></p>
+	</div>
+		<div class="centerBox" id="allContents">
+
+			<a href="javascript:search()" onclick="search(); showSearch();">Search</a>
+			|
+			<a href="javascript:post()" onclick="showJobs();">Post</a>
+			|
+			<a href="javascript:rep()" onclick="showScores();"> Rep</a>
+
+			<div class="leftBox">
+
+				<div id="search">
+					<table>
+						<tr>
+							<td>Find Service:</td>
+							<td class = "textInput"><input type="text" id = "searchBox" />
+							<button type = "button" onclick="showSearch();">Search</button></td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="post" style="display:none;">
+					<table>
+						<tr>
+							<td>Your Email:</td>
+							<td class = "textInput"><input type="text" id = "email" /></td>
+						</tr>
+						<tr>
+							<td>Your Service :</td>
+							<td class = "textInput"><input type="text" id = "description" /></td>
+						</tr>
+						<tr>
+							<td>Your Price per Hr:</td>
+							<td class = "textInput"><input type="text" id = "price" /></td>
+						</tr>
+					</table>
+					<div class="leftBox"><button type = "button" onclick="storeLocal(); showJobs();">Post to Small Jobs</button></div>
+				</div>
+
+				<div id="rep" style="display:none;">
+
+					<table>
+						<tr>
+							<td>Provider Email:</td>
+							<td class = "textInput"><input type="text" id = "reppee" /></td>
+						</tr>
+						<tr>
+							<td>Your Email:</td>
+							<td class = "textInput"><input type="text" id = "repper" /></td>
+						</tr>
+						<tr>
+							<td>Your Comments:</td>
+							<td class = "textInput"><input type="text" id = "comments" /></td>
+						</tr>
+					</table>
+
+					<div class="leftBox">
+					<button type = "button" onclick="storeRep(); showReps();">Give Rep</button>
+					<button type = "button" onclick="showReps();">Show Rep</button>
+					</div>
+
+				</div>
+
+				<div class="outputBox">
+					<div id = "searchResults"></div>
+					<div id = "jobs"></div>
+					<div id = "scores"></div>
+				</div>
+
+				<div class="leftBox">
+					---------<br>Admin Only:
+				</div>
+
+				<div class="leftBox">
+				<button type = "button" onclick="clearPosts(); showJobs();">Clear Posts</button>
+				</div>
+
+				<div class="leftBox">
+				<button type = "button" onclick="localStorage.clear();">Clear All Data</button>
+				</div>
+
+			</div>
+		</div>
+		<script src="smalljobs.js"></script>
+	</body>
+</html>

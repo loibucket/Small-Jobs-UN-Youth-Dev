@@ -1,0 +1,50 @@
+a:link {
+    text-decoration: none;
+}
+
+body {
+	background: #add8e6;
+	margin: 0px;
+	font-family: sans-serif, arial;
+}
+
+h1 {
+	margin: 0px;
+	width: 100%;
+	background: #000080;
+	color: white;
+	text-align: center;
+	font-size: 4em;
+}
+
+input[type="text"]{
+	width: 250px;
+}
+
+#price {
+	width: 50px;
+}
+
+.centerBox {
+	margin-top: 10px;
+	width: 500px;
+	text-align: center;
+	margin: auto;
+}
+
+.leftBox {
+	margin-top: 10px;
+	text-align: left;
+}
+
+.outputBox {
+	margin-top: 10px;
+	text-align: left;
+	background-color: #CCFFFF;
+	padding: 10px;
+  min-height: 150px;
+}
+
+.textInput{
+	text-align: left;
+}
